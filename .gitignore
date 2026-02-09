@@ -1,0 +1,14 @@
+# Виртуальное окружение
+.venv/
+venv/
+
+# Служебные файлы PyCharm
+.idea/
+
+# Кэш Python
+__pycache__/
+*.pyc
+
+# Временные файлы
+Temp/
+service_tools.py

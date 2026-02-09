@@ -1,0 +1,37 @@
+[
+    {
+        "amount": "1500.00",
+        "category_id": 1,
+        "category_name": "Food",
+        "item": "Apples",
+        "created_at": "2026-02-07T16:56:17.606731+00:00"
+    },
+    {
+        "amount": "500.00",
+        "category_id": 2,
+        "category_name": "Transport",
+        "item": "Bus",
+        "created_at": "2026-02-07T16:56:17.606739+00:00"
+    },
+    {
+        "amount": "2500.00",
+        "category_id": 1,
+        "category_name": "Food",
+        "item": "Steak",
+        "created_at": "2026-02-07T16:56:17.606741+00:00"
+    },
+    {
+        "amount": "500.00",
+        "category_id": 2,
+        "category_name": "Transport",
+        "item": "Train",
+        "created_at": "2026-02-07T16:56:17.606742+00:00"
+    },
+    {
+        "amount": "1500.00",
+        "category_id": 2,
+        "category_name": "Transport",
+        "item": "Train",
+        "created_at": "2026-02-07T16:56:17.606743+00:00"
+    }
+]
