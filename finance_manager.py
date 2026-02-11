@@ -24,6 +24,8 @@ class FinanceManager:
         self.file_name = file_name
 
     def add_transaction(self, amount: Decimal, category: Category, item: str) -> Transaction | None:
+        """Добавляет транзакцию в список.
+        Возвращает транзакцию или None, если произошла ошибка."""
         try:
             transaction = Transaction(amount, category, item)
             self.transactions.append(transaction)
@@ -33,6 +35,8 @@ class FinanceManager:
             return None
 
     def save_json(self) -> bool:
+        """Сохраняет транзакции в JSON файл.
+        Возвращает True при успешном сохранении, False при ошибке."""
         try:
             with open(self.file_name, "w", encoding="utf-8") as file:
                 converted_transactions = [
@@ -51,6 +55,8 @@ class FinanceManager:
             return False
 
     def load_json(self) -> bool:
+        """Загружает транзакции из JSON файла.
+        Возвращает True при успешной загрузке, False при ошибке."""
         try:
             with open(self.file_name, "r", encoding="utf-8") as file:
                 loaded_date = json.load(file)
@@ -68,6 +74,8 @@ class FinanceManager:
             return False
 
     def report(self) -> dict[str, list[Decimal]]:
+        """Группирует транзакции по категориям и возвращает словарь,
+        где ключ - название категории, а значение - список сумм транзакций."""
         transactions_by_cat = defaultdict(list)
         for trans in self.transactions:
             transactions_by_cat[trans.category.name].append(trans.amount)
@@ -76,6 +84,7 @@ class FinanceManager:
         return transactions_by_cat
 
     def transactions_by_category(self, category: Category) -> list[Transaction]:
+        """Фильтрует транзакции по категории и возвращает список транзакций, которые принадлежат данной категории."""
         return [t for t in self.transactions if t.category.name == category.name]
 
 
