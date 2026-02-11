@@ -75,6 +75,8 @@ class FinanceManager:
             print(f"Category: {cat} - sum: {sum(transactions_by_cat[cat])}")
         return transactions_by_cat
 
+    def transactions_by_category(self, category: Category) -> list[Transaction]:
+        return [t for t in self.transactions if t.category.name == category.name]
 
 
 cat_food = Category(id=1, name="Food")
@@ -99,3 +101,5 @@ print(fm.transactions)
 print("Report by category:")
 report = fm.report()
 print(report)
+
+print(fm.transactions_by_category(cat_transport))
