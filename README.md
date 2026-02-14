@@ -30,4 +30,24 @@ This is a simple finance manager cli application built using Python.
    python finance_manager.py
    ```
    
+-------
+### test multiline commite 1
+```bash
+git commit -m "Заголовок\n\nПодробное описание на новой строке"
+```
 
+### test multiline commite 2
+```bash
+git commit -m "feat: Добавить механизм авторизации" \
+-m "- Добавлена библиотека JWT
+- Реализована проверка токена
+- Закрыт доступ к методам API
+
+Это решает проблему несанкционированного доступа к данным пользователей."
+```
+
+Doesn't work in Windows cmd, but works in Git Bash and PowerShell. In Windows cmd, you can use the following command to achieve the same result:
+
+```bash
+git commit -m "Заголовок" -m "Подробное описание на новой строке"
+```
